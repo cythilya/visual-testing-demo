@@ -1,0 +1,16 @@
+name: Regular Visual Testing
+on:
+  schedule:
+    - cron: '0 0 * * 1'
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@master
+      - name: Install packages
+        run: yarn
+      - name: Run visual testing
+        run: npx percy exec -- yarn cy:percy
+        env:
+          PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
