@@ -17,7 +17,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public"
+    "build-storybook": "build-storybook -s public",
+    "cy:percy": "npx percy exec -- cypress run"
   },
   "eslintConfig": {
     "extends": [
@@ -61,6 +62,10 @@
     "babel-plugin-named-exports-order": "^0.0.2",
     "chromatic": "^6.10.2",
     "prop-types": "^15.8.1",
-    "webpack": "^5.74.0"
-  }
+    "webpack": "^5.74.0",
+    "@percy/cli": "1.6.1",
+    "@percy/cypress": "3.1.2",
+    "cypress": "5.1.0"
+  },
+  "_id": "visual-testing-demo@0.1.0"
 }
