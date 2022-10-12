@@ -15,4 +15,4 @@
 In the `.github` folder, there are two workflow files,
 
 - Run regular page-level testing by Cypress and Percy in `regular-visual-testing.yml`.
-- Run compent-level testing by Chromatic when PR.
+- Run compent-level testing by Chromatic when PR in `visual-testing.yml`.
