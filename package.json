@@ -18,7 +18,7 @@
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public",
-    "cy:percy": "npx percy exec -- cypress run",
+    "cy:percy": "npx percy exec -- cypress run --headless",
     "chromatic": "npx chromatic --project-token <your-project-token>"
   },
   "eslintConfig": {
