@@ -1,18 +1,24 @@
 # Visual Testing Demo with Chromatic & Percy
 
+## Setup
+
+- Clone this project.
+- Install dependencies by using `yarn`.
+- To run component-level testing by Chromatic, please reference the document [here](https://www.chromatic.com/docs/setup).
+- To run page-level testing by Cypress and Percy, please reference the document [here](https://docs.percy.io/docs/cypress-tutorial).
+- After integrate Chromatic, Cypress and Percy, the you can run the following testing.
+
 ## Run Component-Level Testing with Chromatic
 
-- Step 1: Read the document to intall Chromatic.
-- Step 2: Run `yarn chromatic` in local..
+Run `yarn chromatic` in local.
 
 ## Run Page-Level Testing with Cypress and Percy
 
-- Step 1: Read the document to intall Cypress and Percy.
-- Step 2: Run `yarn cy:percy` in local.
+Run `yarn cy:percy` in local.
 
 ## Run Visual Testing Automatically
 
 In the `.github` folder, there are two workflow files,
 
-- Run regular page-level testing by Cypress and Percy in `regular-visual-testing.yml`.
-- Run compent-level testing by Chromatic when PR in `visual-testing.yml`.
+- One is for regular page-level testing by Cypress and Percy in `regular-visual-testing.yml`.
+- Another is for compent-level testing by Chromatic when submit PR in `visual-testing.yml`.
