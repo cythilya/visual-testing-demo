@@ -50,6 +50,8 @@
     ]
   },
   "devDependencies": {
+    "@percy/cli": "1.6.1",
+    "@percy/cypress": "3.1.2",
     "@storybook/addon-actions": "^6.5.12",
     "@storybook/addon-essentials": "^6.5.12",
     "@storybook/addon-interactions": "^6.5.12",
@@ -62,11 +64,9 @@
     "@storybook/testing-library": "^0.0.13",
     "babel-plugin-named-exports-order": "^0.0.2",
     "chromatic": "^6.10.2",
+    "cypress": "^10.10.0",
     "prop-types": "^15.8.1",
-    "webpack": "^5.74.0",
-    "@percy/cli": "1.6.1",
-    "@percy/cypress": "3.1.2",
-    "cypress": "5.1.0"
+    "webpack": "^5.74.0"
   },
   "_id": "visual-testing-demo@0.1.0"
 }
