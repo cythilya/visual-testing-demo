@@ -17,7 +17,7 @@ Sentry.init({
   replaysOnErrorSampleRate: 1.0,
 });
 
-if (process.env['PERFORMANCE_TEST'] === 'cypress') {
+if (process.env['REACT_APP_PERFORMANCE_TEST'] === 'cypress') {
   Sentry.setTag('test', 'peformance-test');
 }
 
