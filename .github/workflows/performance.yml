@@ -15,11 +15,14 @@ jobs:
         run: yarn
       # - name: Build
       #   run: yarn build
-      - name: Start
-        run: yarn start
+      # - name: Start
+      #   run: yarn start
+      #   with:
+      #     wait-on: 'http://localhost:3000'
       - name: Cypress run with env
         uses: cypress-io/github-action@v5
         with:
           browser: chrome
           headed: true
+          start: yarn start
           wait-on: 'http://localhost:3000'
