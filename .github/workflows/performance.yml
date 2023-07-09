@@ -3,6 +3,8 @@ on:
   push:
     branches:
       - performance-test
+env:
+  PERFORMANCE_TEST: ${{ secrets.PERFORMANCE_TEST }}
 jobs:
   cypress-run:
     runs-on: ubuntu-22.04
@@ -11,8 +13,6 @@ jobs:
         uses: actions/checkout@v3
       - name: Cypress run with env
         uses: cypress-io/github-action@v5
-        env:
-          PERFORMANCE_TEST: ${{ secrets.PERFORMANCE_TEST }}
         with:
           browser: chrome
           headed: true
