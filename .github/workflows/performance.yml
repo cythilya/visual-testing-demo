@@ -22,3 +22,4 @@ jobs:
         with:
           browser: chrome
           headed: true
+          wait-on: 'http://localhost:3000'
