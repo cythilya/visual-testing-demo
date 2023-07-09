@@ -22,6 +22,7 @@ if (process.env['PERFORMANCE_TEST'] === 'cypress') {
 }
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
 root.render(
   <React.StrictMode>
     <App />
