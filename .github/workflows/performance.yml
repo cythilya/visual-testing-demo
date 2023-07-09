@@ -11,6 +11,10 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+      - name: Build
+        run: yarn build
+      - name: Start
+        run: yarn start
       - name: Cypress run with env
         uses: cypress-io/github-action@v5
         with:
