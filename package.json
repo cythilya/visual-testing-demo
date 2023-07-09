@@ -20,7 +20,9 @@
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public",
     "cy:percy": "npx percy exec -- cypress run --headless",
-    "chromatic": "npx chromatic --project-token <your-project-token>"
+    "chromatic": "npx chromatic --project-token <your-project-token>",
+    "cypress:open": "./node_modules/cypress/bin/cypress open",
+    "cypress": "./node_modules/cypress/bin/cypress run"
   },
   "eslintConfig": {
     "extends": [
