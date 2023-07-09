@@ -1,0 +1,23 @@
+name: Performance Test
+on:
+  push:
+    branches:
+      - performance-test
+  workflow_dispatch:
+
+env:
+  NX_PERFORMANCE_TEST: ${{ secrets.PERFORMANCE_TEST }}
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Install Dependencies in UI folder
+        run: yarn install
+      - name: Build
+        run: yarn build
+      - name: Build
+        run: yarn start
+      - name: Run performance test
+        run: yarn cypress
