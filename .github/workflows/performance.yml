@@ -3,17 +3,16 @@ on:
   push:
     branches:
       - performance-test
-  workflow_dispatch:
-
-env:
-  PERFORMANCE_TEST: ${{ secrets.PERFORMANCE_TEST }}
 jobs:
   cypress-run:
     runs-on: ubuntu-22.04
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      # Install npm dependencies, cache them correctly
-      # and run all Cypress tests
-      - name: Cypress run
+      - name: Cypress run with env
         uses: cypress-io/github-action@v5
+        env:
+          PERFORMANCE_TEST: ${{ secrets.PERFORMANCE_TEST }}
+        with:
+          browser: chrome
+          headed: true
