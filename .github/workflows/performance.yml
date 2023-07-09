@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 env:
-  NX_PERFORMANCE_TEST: ${{ secrets.PERFORMANCE_TEST }}
+  PERFORMANCE_TEST: ${{ secrets.PERFORMANCE_TEST }}
 jobs:
   cypress-run:
     runs-on: ubuntu-22.04
