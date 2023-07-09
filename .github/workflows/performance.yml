@@ -9,14 +9,18 @@ env:
   NX_PERFORMANCE_TEST: ${{ secrets.PERFORMANCE_TEST }}
 jobs:
   cypress-run:
-    runs-on: ubuntu-22.04
+    runs-on: uubuntu-latest
     container: cypress/browsers:node16.16.0-chrome107-ff107-edge
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
-      - name: Cypress run
+        uses: actions/checkout@v2
+      - name: Install Dependencies in UI folder
+        run: yarn install
+      - name: Build
+        run: yarn build
+      - name: Start project
+        run: yarn start
+        browser: chrome
+      - name: Run performance test
+        run: yarn cypress
         uses: cypress-io/github-action@v5
-        with:
-          build: npm run build
-          start: npm start
-          browser: chrome
